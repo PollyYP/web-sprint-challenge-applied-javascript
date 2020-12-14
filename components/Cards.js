@@ -74,5 +74,5 @@ function createArticleCards(key) {
 
 getAllArticleObj.forEach((e) => {
   let a = createArticleCards(getAllArticleObj[e]);
-  document.querySelector(div.cards - container).appendChild(a);
+  document.querySelector("div.cards - container").appendChild(a);
 });
