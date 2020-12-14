@@ -27,14 +27,19 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+   Dom or Document Object Model is a model or a blueprint of how the website should look like. In Dom, we can write Javascript to create, modify and delete HTML elements, set style, classes and attributes; and listen and respond to event to make website interactive.
 
 2. What is an event?
+   Anything important that happens on the webpage generates an event like a click when we click somewhere on the page, mouse moving or the user triggering full screen mode etc.
 
 3. What is an event listener?
+   We write the code to wait and listen for the next command in the form of function to do something only that type of event happens. For example, we add an event listener to the button so that it listen for clicks that will happen on that button then run the code inside the function after that.
 
 4. Why would we convert a NodeList into an Array?
+   When we call elements using querySelectorAll() it will return with nodelist or an array like, not an array, and we can not use any array method to manipulate the elements we get back.
 
 5. What is a component?
+   The way we create and organize code to be reusable.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -84,6 +89,6 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's Repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete after receiving your pull-request
