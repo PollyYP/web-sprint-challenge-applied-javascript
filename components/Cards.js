@@ -21,23 +21,21 @@
 //
 // Use your function to create a card for each of the articles, and append each card to the DOM.
 
-let getAllArticleObj = axios
-  .get("https://lambda-times-api.herokuapp.com/articles")
-  .then((res) => {
-    let allArticles = res.data.articles;
-    console.log(allArticles);
+axios.get("https://lambda-times-api.herokuapp.com/articles").then((res) => {
+  let allArticles = res.data.articles;
 
-    let allArticleObj = [];
-    allArticles["bootstrap"].forEach((e) => allArticleObj.push(e));
-    allArticles["javascript"].forEach((e) => allArticleObj.push(e));
-    allArticles["jquery"].forEach((e) => allArticleObj.push(e));
-    allArticles["node"].forEach((e) => allArticleObj.push(e));
-    allArticles["technology"].forEach((e) => allArticleObj.push(e));
+  let allArticleObj = [];
+  allArticles["bootstrap"].forEach((e) => allArticleObj.push(e));
+  allArticles["javascript"].forEach((e) => allArticleObj.push(e));
+  allArticles["jquery"].forEach((e) => allArticleObj.push(e));
+  allArticles["node"].forEach((e) => allArticleObj.push(e));
+  allArticles["technology"].forEach((e) => allArticleObj.push(e));
 
-    return allArticleObj;
+  allArticleObj.forEach((e) => {
+    const articleCard = createArticleCards(e);
+    console.log(articleCard);
   });
-
-console.log(getAllArticleObj);
+});
 
 function createArticleCards(key) {
   let getCard = document.createElement("div");
@@ -61,7 +59,7 @@ function createArticleCards(key) {
   author.appendChild(imgCtn);
   imgCtn.appendChild(image);
   author.appendChild(getAuthorName);
-  document.querySelector(div.cards - container).appendChild(getCard);
+  document.querySelector("div.cards-container").appendChild(getCard);
 
   getCard.addEventListener("click", () => {
     console.log(headline);
@@ -69,10 +67,3 @@ function createArticleCards(key) {
 
   return getCard;
 }
-
-//createArticleCards(getAllArticleObj);
-
-getAllArticleObj.forEach((e) => {
-  let a = createArticleCards(getAllArticleObj[e]);
-  document.querySelector("div.cards - container").appendChild(a);
-});

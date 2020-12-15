@@ -23,7 +23,7 @@ axios
       let getDiv = document.querySelector("div.topics");
       getDiv.appendChild(getTab);
 
-      console.log(getDiv);
+      //   console.log(getDiv);
     });
   })
 
